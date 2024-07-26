@@ -35,7 +35,9 @@ void manacher(string s) {
         } else {
             p[i] = 0;
         }
-        while(i - p[i] - 1 >= 0 && i + p[i] + 1 < len && s[i - p[i] - 1] == s[i + p[i] + 1]) {
+        while(i - p[i] - 1 >= 0 &&
+              i + p[i] + 1 < len &&
+              s[i - p[i] - 1] == s[i + p[i] + 1]) {
             p[i]++;
         }
         if(r < i + p[i]) {
